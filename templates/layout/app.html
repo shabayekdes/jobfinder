@@ -1,0 +1,788 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Careerfy Home 2</title>
+
+    <!-- Css -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'css/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'fonts/next-icon/flat-icon.css' %}" rel="stylesheet">
+    <link href="{% static 'css/slick-slider.css' %}" rel="stylesheet">
+    <link href="{% static 'build/mediaelementplayer.css' %}" rel="stylesheet" >
+    <link href="{% static 'plugin-css' %}/fancybox.css" rel="stylesheet">
+    <link href="{% static 'plugin-css' %}/plugin.css" rel="stylesheet">
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/color.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'css/homepage-two-typo.css' %}" rel="stylesheet">
+    <link href="{% static 'css/home-two-color.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="careerfy-wrapper">
+
+        <!-- Header -->
+        <header id="careerfy-header" class="careerfy-header-two">
+
+            <aside class="col-md-2"> <a href="index.html" class="careerfy-logo"><img src="{% static 'images/job-finder.png' %}" alt=""></a> </aside>
+            <aside class="col-md-10">
+                <div class="careerfy-right">
+                    <nav class="careerfy-navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#careerfy-navbar-collapse-1" aria-expanded="false">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="careerfy-navbar-collapse-1">
+                            <ul class="navbar-nav">
+                                    <li class="active"><a href="index.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="https://eyecix.com/html/careerfy/">Demo Careerfy</a></li>
+                                            <li><a href="https://eyecix.com/html/careerfy-demos/hireright-demo/">Demo Hireright</a></li>
+                                            <li><a href="https://eyecix.com/html/careerfy-demos/jobshub-demo/">Demo Jobshub</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="cv-packages.html">CV Packages</a></li>
+                                            <li><a href="faq.html">Faq's</a></li>
+                                            <li><a href="job-grid-full.html">Job Grid</a></li>
+                                            <li><a href="job-grid-with-filters.html">Job Grid W/filter</a></li>
+                                            <li><a href="job-listings.html">Job Listings</a></li>
+                                            <li><a href="job-detail.html">Job Detail</a></li>
+                                            <li><a href="job-packages.html">Job Packages</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">For Candidates</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="candidate-dashboard-applied-jobs.html">Applied Jobs</a></li>
+                                            <li><a href="candidate-dashboard-changed-password.html">Changed Password</a></li>
+                                            <li><a href="candidate-dashboard-cv-manager.html">CV Manager</a></li>
+                                            <li><a href="candidate-dashboard-job-alert.html">Job Alert</a></li>
+                                            <li><a href="candidate-dashboard-profile-seting.html">Profile Setting</a></li>
+                                            <li><a href="candidate-dashboard-resume.html">Candidate Resume</a></li>
+                                            <li><a href="candidate-dashboard-saved-jobs.html">Saved Jobs</a></li>
+                                            <li><a href="candidate-listings.html">Candidate Listings</a></li>
+                                            <li><a href="candidate-grid.html">Candidate Grid</a></li>
+                                            <li><a href="candidate-detail.html">Candidate Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">For Employers</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="employer-list.html">Employer List</a></li>
+                                            <li><a href="employer-grid.html">Employer Grid</a></li>
+                                            <li><a href="employer-detail.html">Employer Detail</a></li>
+                                            <li><a href="employer-dashboard-transactions.html">Transactions</a></li>
+                                            <li><a href="employer-dashboard-resumes.html">Employer Resumes</a></li>
+                                            <li><a href="employer-dashboard-profile-seting.html">Profile Setting</a></li>
+                                            <li><a href="employer-dashboard-pkgpayment.html">Package Payment</a></li>
+                                            <li><a href="employer-dashboard-packages.html">Packages</a></li>
+                                            <li><a href="employer-dashboard-newjob.html">Employer New Job</a></li>
+                                            <li><a href="employer-dashboard-manage-jobs.html">Menage Jobs</a></li>
+                                            <li><a href="employer-dashboard-confitmation.html">Employer Confitmation</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact-us.html">Contact</a></li>
+                                </ul>
+                        </div>
+                    </nav>
+                    <ul class="careerfy-user-option">
+                        <li><a href="#" class="careerfy-post-btn"><i class="careerfy-icon careerfy-arrows-2"></i> Post Job</a></li>
+                        <li><a href="#" class="careerfy-btn-icon careerfy-open-signin-tab"><i class="careerfy-icon careerfy-social-1"></i></a></li>
+                    </ul>
+                </div>
+            </aside>
+
+        </header>
+        <!-- Header -->
+
+        <!-- Banner -->
+        <div class="careerfy-banner-two careerfy-typo-wrap">
+            <div class="careerfy-banner-caption">
+                <div class="container">
+                    <h1>Want To Land Your Dream Job?</h1>
+                    <p>Aliquam Vestibulum Cursus Felis. In Iaculis Iaculis Sapien Ac Condimentum. Vestibulum Congue Pellentesque Dui Non, Semper Orci.</p>
+                    <div class="clearfix"></div>
+                    <a href="#" class="careerfy-banner-two-btn">Find a Jobs</a>
+                    <div class="clearfix"></div>
+                    <form class="careerfy-banner-search-two">
+                        <ul>
+                            <li>
+                                <i class="careerfy-icon careerfy-search"></i>
+                                <input value="Job Title, Keywords, or Company" onblur="if(this.value == '') { this.value ='Job Title, Keywords, or Company'; }" onfocus="if(this.value =='Job Title, Keywords, or Company') { this.value = ''; }" type="text">
+                            </li>
+                            <li>
+                                <input value="City, State or ZIP" onblur="if(this.value == '') { this.value ='City, State or ZIP'; }" onfocus="if(this.value =='City, State or ZIP') { this.value = ''; }" type="text">
+                                <i class="careerfy-icon careerfy-location"></i>
+                            </li>
+                            <li>
+                                <i class="careerfy-icon careerfy-folder"></i>
+                                <div class="careerfy-select-style">
+                                    <select>
+                                        <option>Categories</option>
+                                        <option>Categories</option>
+                                        <option>Categories</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li> <input type="submit" value="Search Jobs"> </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Banner -->
+
+        <!-- Main Content -->
+        <div class="careerfy-main-content">
+
+            <!-- Main Section -->
+            <div class="careerfy-main-section careerfy-modren-services-full">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <!-- FancyTitle -->
+                            <div class="careerfy-fancy-title careerfy-fancy-title-two">
+                                <h2>Top employers recruting <span>with us</span></h2>
+                                <p>A better career is out there. We'll help you find it to use.</p>
+                            </div>
+                            <!-- FancyTitle -->
+                            <!-- Services -->
+                            <div class="careerfy-services careerfy-modren-services">
+                                <ul class="row">
+                                    <li class="col-md-3">
+                                        <div class="careerfy-modren-services-wrap">
+                                            <img src="extra-images/modren-service-logo-1.png" alt="">
+                                            <p>This is the best theme I have seen in years. It all the needed for a perfect Job portal</p>
+                                            <span>1,352 jobs</span>
+                                            <a href="#" class="careerfy-modren-service-link"><i class="careerfy-icon careerfy-arrows22"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="careerfy-modren-services-wrap">
+                                            <img src="extra-images/modren-service-logo-2.png" alt="">
+                                            <p>I know, I know! This is the best poll ever made and you are not sure which answer to pick ;)</p>
+                                            <span>527 jobs</span>
+                                            <a href="#" class="careerfy-modren-service-link"><i class="careerfy-icon careerfy-arrows22"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="careerfy-modren-services-wrap">
+                                            <img src="extra-images/modren-service-logo-3.png" alt="">
+                                            <p>Euripidis referrentur his. Ad pro oporteat laboramus scriptorem, nobis decore timeam in pri.</p>
+                                            <span>491 jobs</span>
+                                            <a href="#" class="careerfy-modren-service-link"><i class="careerfy-icon careerfy-arrows22"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-3">
+                                        <div class="careerfy-modren-services-wrap">
+                                            <img src="extra-images/modren-service-logo-4.png" alt="">
+                                            <p>Ei has veniam liberavisse, omnes utinam docendi eos at, id usu eligendi deleniti.</p>
+                                            <span>364 jobs</span>
+                                            <a href="#" class="careerfy-modren-service-link"><i class="careerfy-icon careerfy-arrows22"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Services -->
+                            <div class="careerfy-modren-btn"><a href="#">See More</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Main Section -->
+
+            <!-- Main Section -->
+            <div class="careerfy-main-section careerfy-joblisting-plain-full">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <!-- FancyTitle -->
+                            <div class="careerfy-fancy-title careerfy-fancy-title-two">
+                                <h2>Recommend <span>Jobs</span></h2>
+                                <p>A better career is out there. We'll help you find it to use.</p>
+                            </div>
+                            <!-- FancyTitle -->
+                            <!-- Job Listings -->
+                            <div class="careerfy-job careerfy-joblisting-plain">
+                                <ul class="row">
+                                    <li class="col-md-12">
+                                        <div class="careerfy-joblisting-plain-wrap">
+                                            <figure><a href="#"><img src="extra-images/joblisting-plain-1.png" alt=""></a></figure>
+                                            <div class="careerfy-joblisting-plain-text">
+                                                <div class="careerfy-joblisting-plain-left">
+                                                    <h2><a href="#">Need Senior Rolling Stock Technician</a> <span>Featured</span> </h2>
+                                                    <ul>
+                                                        <li><span>@ Rose Clinic</span></li>
+                                                        <li><i class="careerfy-icon careerfy-filter-tool-black-shape"></i> Healthcare</li>
+                                                        <li><i class="careerfy-icon careerfy-money"></i> $70000</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="careerfy-joblisting-plain-right">
+                                                    <small><i class="careerfy-icon careerfy-maps-and-flags"></i>  Netherlands, Rotterdam</small>
+                                                    <a href="#" class="careerfy-job-like"><i class="fa fa-heart"></i></a>
+                                                    <span class="careerfy-joblisting-plain-status">Freelance</span>
+                                                </div>
+                                            <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-12">
+                                        <div class="careerfy-joblisting-plain-wrap">
+                                            <figure><a href="#"><img src="extra-images/joblisting-plain-2.png" alt=""></a></figure>
+                                            <div class="careerfy-joblisting-plain-text">
+                                                <div class="careerfy-joblisting-plain-left">
+                                                    <h2><a href="#">Senior Health And Nutrition Advisor</a> </h2>
+                                                    <ul>
+                                                        <li><span>@ Telimed</span></li>
+                                                        <li><i class="careerfy-icon careerfy-filter-tool-black-shape"></i> Healthcare</li>
+                                                        <li><i class="careerfy-icon careerfy-money"></i> $30 - $50 / hour</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="careerfy-joblisting-plain-right">
+                                                    <small><i class="careerfy-icon careerfy-maps-and-flags"></i>  Netherlands, Rotterdam</small>
+                                                    <a href="#" class="careerfy-job-like"><i class="fa fa-heart"></i></a>
+                                                    <span class="careerfy-joblisting-plain-status careerfy-blue-status">Full Time</span>
+                                                </div>
+                                            <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-12">
+                                        <div class="careerfy-joblisting-plain-wrap">
+                                            <figure><a href="#"><img src="extra-images/joblisting-plain-3.png" alt=""></a></figure>
+                                            <div class="careerfy-joblisting-plain-text">
+                                                <div class="careerfy-joblisting-plain-left">
+                                                    <h2><a href="#">Restaurant Dishwasher</a></h2>
+                                                    <ul>
+                                                        <li><span>@ King LLC</span></li>
+                                                        <li><i class="careerfy-icon careerfy-filter-tool-black-shape"></i> Restaurant</li>
+                                                        <li><i class="careerfy-icon careerfy-money"></i> $55000 - $70000</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="careerfy-joblisting-plain-right">
+                                                    <small><i class="careerfy-icon careerfy-maps-and-flags"></i>  Netherlands, Rotterdam</small>
+                                                    <a href="#" class="careerfy-job-like"><i class="fa fa-heart"></i></a>
+                                                    <span class="careerfy-joblisting-plain-status careerfy-red-status">Temporary</span>
+                                                </div>
+                                            <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-12">
+                                        <div class="careerfy-joblisting-plain-wrap">
+                                            <figure><a href="#"><img src="extra-images/joblisting-plain-4.png" alt=""></a></figure>
+                                            <div class="careerfy-joblisting-plain-text">
+                                                <div class="careerfy-joblisting-plain-left">
+                                                    <h2><a href="#">Head Of Commercial Contracts</a></h2>
+                                                    <ul>
+                                                        <li><span>@ Moore & Kavinsky</span></li>
+                                                        <li><i class="careerfy-icon careerfy-filter-tool-black-shape"></i> Accounting</li>
+                                                        <li><i class="careerfy-icon careerfy-money"></i> $15000</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="careerfy-joblisting-plain-right">
+                                                    <small><i class="careerfy-icon careerfy-maps-and-flags"></i>  Netherlands, Rotterdam</small>
+                                                    <a href="#" class="careerfy-job-like"><i class="fa fa-heart"></i></a>
+                                                    <span class="careerfy-joblisting-plain-status">Freelance</span>
+                                                </div>
+                                            <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-12">
+                                        <div class="careerfy-joblisting-plain-wrap">
+                                            <figure><a href="#"><img src="extra-images/joblisting-plain-5.png" alt=""></a></figure>
+                                            <div class="careerfy-joblisting-plain-text">
+                                                <div class="careerfy-joblisting-plain-left">
+                                                    <h2><a href="#">Clinical Psychologist</a></h2>
+                                                    <ul>
+                                                        <li><span>@ Daig Block</span></li>
+                                                        <li><i class="careerfy-icon careerfy-filter-tool-black-shape"></i> Healthcare</li>
+                                                        <li><i class="careerfy-icon careerfy-money"></i> $40000 - $50000</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="careerfy-joblisting-plain-right">
+                                                    <small><i class="careerfy-icon careerfy-maps-and-flags"></i>  Netherlands, Rotterdam</small>
+                                                    <a href="#" class="careerfy-job-like"><i class="fa fa-heart"></i></a>
+                                                    <span class="careerfy-joblisting-plain-status careerfy-part-status">Part Time</span>
+                                                </div>
+                                            <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Job Listings -->
+                            <div class="careerfy-modren-btn"><a href="#">Browse all jobs</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Main Section -->
+
+            <!-- Main Section -->
+            <div class="careerfy-main-section">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-md-6 careerfy-parallex-box">
+                            <div class="careerfy-parallex-box-wrap">
+                                <h2>Start your Career Today by Singing Up Now!</h2>
+                                <p>HireRight Wordpress Theme is a complete solution is loaded with options, both for recruiter and for candidates. Recruiters and companies can post, edit and manage job offers and company profiles and candidates can do the same things with their resumes.</p>
+                                <a href="#" class="careerfy-parallex-box-btn">Sing Up Now</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 careerfy-media-player">
+                            <video src="build/echo-hereweare.mp4" poster="build/parallex-video-box-img.jpg" controls="controls" preload=""></video>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Main Section -->
+
+            <!-- Main Section -->
+            <div class="careerfy-main-section careerfy-news-grid-full">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <!-- FancyTitle -->
+                            <div class="careerfy-fancy-title careerfy-fancy-title-two">
+                                <h2>Latest Articles</h2>
+                                <p>A better career is out there. We'll help you find it to use.</p>
+                            </div>
+                            <!-- FancyTitle -->
+                            <!-- Latest Blogs -->
+                            <div class="careerfy-blog careerfy-news-grid">
+                                <ul class="row">
+                                    <li class="col-md-4">
+                                        <div class="careerfy-news-grid-wrap">
+                                            <figure><a href="#"><img src="extra-images/latest-blog-1.jpg" alt=""></a></figure>
+                                            <div class="careerfy-news-grid-text">
+                                                <ul>
+                                                    <li>OCT 6, 2016</li>
+                                                    <li><a href="#">Culture</a></li>
+                                                </ul>
+                                                <h2><a href="#">Are You Paid Fairly? See Your Market Worth in Seconds</a></h2>
+                                                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam tempore, cum soluta nobis est.</p>
+                                                <a href="#" class="careerfy-modren-service-link"><i class="careerfy-icon careerfy-arrows22"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <div class="careerfy-news-grid-wrap">
+                                            <figure><a href="#"><img src="extra-images/latest-blog-2.jpg" alt=""></a></figure>
+                                            <div class="careerfy-news-grid-text">
+                                                <ul>
+                                                    <li>OCT 6, 2016</li>
+                                                    <li><a href="#">Culture</a></li>
+                                                </ul>
+                                                <h2><a href="#">Are You Paid Fairly? See Your Market Worth in Seconds</a></h2>
+                                                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam tempore, cum soluta nobis est.</p>
+                                                <a href="#" class="careerfy-modren-service-link"><i class="careerfy-icon careerfy-arrows22"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="col-md-4">
+                                        <div class="careerfy-news-grid-wrap">
+                                            <figure><a href="#"><img src="extra-images/latest-blog-3.jpg" alt=""></a></figure>
+                                            <div class="careerfy-news-grid-text">
+                                                <ul>
+                                                    <li>OCT 6, 2016</li>
+                                                    <li><a href="#">Culture</a></li>
+                                                </ul>
+                                                <h2><a href="#">Are You Paid Fairly? See Your Market Worth in Seconds</a></h2>
+                                                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam tempore, cum soluta nobis est.</p>
+                                                <a href="#" class="careerfy-modren-service-link"><i class="careerfy-icon careerfy-arrows22"></i></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Latest Blogs -->
+                            <div class="careerfy-modren-btn"><a href="#">Keep Reading</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Main Section -->
+
+            <!-- Main Section -->
+            <div class="careerfy-main-section">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <!-- FancyTitle -->
+                            <div class="careerfy-fancy-title careerfy-fancy-title-two">
+                                <h2>Our Partners</h2>
+                                <p>A better career is out there. We'll help you find it to use.</p>
+                            </div>
+                            <!-- FancyTitle -->
+                            <!-- Partner -->
+                            <div class="careerfy-partnertwo-slider">
+                                <div class="careerfy-partnertwo-slider-layer">
+                                    <a href="#"><img src="extra-images/partner-two-logo-1.png" alt=""></a>
+                                </div>
+                                <div class="careerfy-partnertwo-slider-layer">
+                                    <a href="#"><img src="extra-images/partner-two-logo-2.png" alt=""></a>
+                                </div>
+                                <div class="careerfy-partnertwo-slider-layer">
+                                    <a href="#"><img src="extra-images/partner-two-logo-3.png" alt=""></a>
+                                </div>
+                                <div class="careerfy-partnertwo-slider-layer">
+                                    <a href="#"><img src="extra-images/partner-two-logo-4.png" alt=""></a>
+                                </div>
+                                <div class="careerfy-partnertwo-slider-layer">
+                                    <a href="#"><img src="extra-images/partner-two-logo-5.png" alt=""></a>
+                                </div>
+                                <div class="careerfy-partnertwo-slider-layer">
+                                    <a href="#"><img src="extra-images/partner-two-logo-6.png" alt=""></a>
+                                </div>
+                                <div class="careerfy-partnertwo-slider-layer">
+                                    <a href="#"><img src="extra-images/partner-two-logo-6.png" alt=""></a>
+                                </div>
+                            </div>
+                            <!-- Partner -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Main Section -->
+
+            <!-- Main Section -->
+            <div class="careerfy-main-section careerfy-testimonial-slider-full">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <!-- FancyTitle -->
+                            <div class="careerfy-fancy-title careerfy-fancy-title-two">
+                                <h2>What people say <span>about us</span></h2>
+                            </div>
+                            <!-- FancyTitle -->
+                            <!-- Testimonial -->
+                            <div class="careerfy-testimonial-styletwo">
+                                <div class="careerfy-testimonial-styletwo-layer">
+                                    <img src="extra-images/testimonial-slider-thumb-1.png" alt="">
+                                    <p>Nam eu eleifend nulla. Duis consectetur sit amet risus sit amet venenatis. Pellentesque pulvinar ante a tincidunt placerat. Donec dapibus efficitur arcu, a rhoncus lectus egestas elementum.</p>
+                                    <span>Adeline Morrison</span>
+                                    <small>Branding Manage - HireRight.com</small>
+                                </div>
+                                <div class="careerfy-testimonial-styletwo-layer">
+                                    <img src="extra-images/testimonial-slider-thumb-2.png" alt="">
+                                    <p>Nam eu eleifend nulla. Duis consectetur sit amet risus sit amet venenatis. Pellentesque pulvinar ante a tincidunt placerat. Donec dapibus efficitur arcu, a rhoncus lectus egestas elementum.</p>
+                                    <span>Johnny Sanders</span>
+                                    <small>Branding Manage - HireRight.com</small>
+                                </div>
+                                <div class="careerfy-testimonial-styletwo-layer">
+                                    <img src="extra-images/testimonial-slider-thumb-3.png" alt="">
+                                    <p>Nam eu eleifend nulla. Duis consectetur sit amet risus sit amet venenatis. Pellentesque pulvinar ante a tincidunt placerat. Donec dapibus efficitur arcu, a rhoncus lectus egestas elementum.</p>
+                                    <span>Johnny Sanders</span>
+                                    <small>Branding Manage - HireRight.com</small>
+                                </div>
+                            </div>
+                            <!-- Testimonial -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Main Section -->
+
+        </div>
+        <!-- Main Content -->
+
+        <!-- Footer -->
+        <footer id="careerfy-footer" class="careerfy-footer-two">
+            <div class="container">
+                <!-- Footer Widget -->
+                <div class="careerfy-footer-widget">
+                    <div class="row">
+                        <aside class="col-md-9">
+                            <div class="widget widget_section_nav">
+                                <ul>
+                                    <li><a href="#">Shortcodes</a></li>
+                                    <li><a href="#">Browse Jobs</a></li>
+                                    <li><a href="#">Browse Candidates</a></li>
+                                    <li><a href="#">Help Center</a></li>
+                                </ul>
+                            </div>
+                            <div class="widget widget_section_nav">
+                                <ul>
+                                    <li><a href="#">Job Page</a></li>
+                                    <li><a href="#">Browse Categories</a></li>
+                                    <li><a href="#">Employer Dashboard</a></li>
+                                    <li><a href="#">Guidelines</a></li>
+                                </ul>
+                            </div>
+                            <div class="widget widget_section_nav">
+                                <ul>
+                                    <li><a href="#">Job Page Alternative</a></li>
+                                    <li><a href="#">Submit Resume</a></li>
+                                    <li><a href="#">Add Job</a></li>
+                                    <li><a href="#">NEW - Terms of Use</a></li>
+                                </ul>
+                            </div>
+                            <div class="widget widget_section_nav">
+                                <ul>
+                                    <li><a href="#">Resume Page</a></li>
+                                    <li><a href="#">Candidate Dashboard</a></li>
+                                    <li><a href="#">Job Packages</a></li>
+                                    <li><a href="#">NEW - Privacy & Cookies</a></li>
+                                </ul>
+                            </div>
+                            <div class="careerfy-footer-newslatter">
+                                <form>
+                                    <label>Subscribe for weekly newsletter</label>
+                                    <ul>
+                                        <li>
+                                            <i class="careerfy-icon careerfy-mail"></i>
+                                            <input value="Sign up for newsletter professionally designed templates." onblur="if(this.value == '') { this.value ='Sign up for newsletter professionally designed templates.'; }" onfocus="if(this.value =='Sign up for newsletter professionally designed templates.') { this.value = ''; }" type="text">
+                                        </li>
+                                        <li>
+                                            <i class="careerfy-icon careerfy-arrows22"></i>
+                                            <input type="submit" value="Subcribe">
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </aside>
+                        <aside class="col-md-3">
+                            <div class="widget jobsearch_twitter_widget">
+                                <div class="jobsearch_twitter_widget_wrap">
+                                    <p>Great fun commentating with @mj_slats that last 30 mins ! We were riding the emotion of the game with all our viewers, was great fun, enjoyed itx</p>
+                                    <span>3 hours ago</span>
+                                </div>
+                                <small><i class="fa fa-twitter"></i> @ShaneWarne</small>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+                <!-- Footer Widget -->
+                <!-- CopyRight -->
+                <div class="careerfy-copyright-two">
+                    <ul class="careerfy-copyright-social">
+                        <li><a href="#" class="careerfy-icon careerfy-facebook-logo"></a></li>
+                        <li><a href="#" class="careerfy-icon careerfy-twitter-logo"></a></li>
+                        <li><a href="#" class="careerfy-icon careerfy-linkedin-button"></a></li>
+                        <li><a href="#" class="careerfy-icon careerfy-dribbble-logo"></a></li>
+                    </ul>
+                    <p>Copyrights © 2018 All Rights Reserved by EyeCix</p>
+                    <ul class="careerfy-copyright-download">
+                        <li>Download Apps</li>
+                        <li><a href="#" class="careerfy-icon careerfy-apple"></a></li>
+                        <li><a href="#" class="careerfy-icon careerfy-android-logo"></a></li>
+                    </ul>
+                </div>
+                <!-- CopyRight -->
+            </div>
+        </footer>
+        <!-- Footer -->
+
+    </div>
+    <!-- Wrapper -->
+
+    <!-- ModalLogin Box -->
+    <div class="careerfy-modal fade careerfy-typo-wrap" id="JobSearchModalSignup">
+        <div class="modal-inner-area">&nbsp;</div>
+        <div class="modal-content-area">
+            <div class="modal-box-area">
+
+                <div class="careerfy-modal-title-box">
+                    <h2>Login to your account</h2>
+                    <span class="modal-close"><i class="fa fa-times"></i></span>
+                </div>
+                <form>
+                    <div class="careerfy-box-title">
+                        <span>Choose your Account Type</span>
+                    </div>
+                    <div class="careerfy-user-options">
+                        <ul>
+                            <li class="active">
+                                <a href="#">
+                                     <i class="careerfy-icon careerfy-user"></i>
+                                     <span>Candidate</span>
+                                     <small>I want to discover awesome companies.</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                     <i class="careerfy-icon careerfy-building"></i>
+                                     <span>Employer</span>
+                                     <small>I want to attract the best talent.</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="careerfy-user-form">
+                        <ul>
+                            <li>
+                                <label>Email Address:</label>
+                                <input value="Enter Your Email Address" onblur="if(this.value == '') { this.value ='Enter Your Email Address'; }" onfocus="if(this.value =='Enter Your Email Address') { this.value = ''; }" type="text">
+                                <i class="careerfy-icon careerfy-mail"></i>
+                            </li>
+                            <li>
+                                <label>Password:</label>
+                                <input value="Enter Password" onblur="if(this.value == '') { this.value ='Enter Password'; }" onfocus="if(this.value =='Enter Password') { this.value = ''; }" type="text">
+                                <i class="careerfy-icon careerfy-multimedia"></i>
+                            </li>
+                            <li>
+                                <input type="submit" value="Sign In">
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                        <div class="careerfy-user-form-info">
+                            <p>Forgot Password? | <a href="#">Sign Up</a></p>
+                            <div class="careerfy-checkbox">
+                                <input type="checkbox" id="r10" name="rr" />
+                                <label for="r10"><span></span> Remember Password</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="careerfy-box-title careerfy-box-title-sub">
+                        <span>Or Sign In With</span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <ul class="careerfy-login-media">
+                        <li><a href="#"><i class="fa fa-facebook"></i> Sign In with Facebook</a></li>
+                        <li><a href="#" data-original-title="google"><i class="fa fa-google"></i> Sign In with Google</a></li>
+                        <li><a href="#" data-original-title="twitter"><i class="fa fa-twitter"></i> Sign In with Twitter</a></li>
+                        <li><a href="#" data-original-title="linkedin"><i class="fa fa-linkedin"></i> Sign In with LinkedIn</a></li>
+                    </ul>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal Signup Box -->
+    <div class="careerfy-modal fade careerfy-typo-wrap" id="JobSearchModalLogin">
+        <div class="modal-inner-area">&nbsp;</div>
+        <div class="modal-content-area">
+            <div class="modal-box-area">
+
+                <div class="careerfy-modal-title-box">
+                    <h2>Signup to your account</h2>
+                    <span class="modal-close"><i class="fa fa-times"></i></span>
+                </div>
+                <form>
+                    <div class="careerfy-box-title">
+                        <span>Choose your Account Type</span>
+                    </div>
+                    <div class="careerfy-user-options">
+                        <ul>
+                            <li class="active">
+                                <a href="#">
+                                     <i class="careerfy-icon careerfy-user"></i>
+                                     <span>Candidate</span>
+                                     <small>I want to discover awesome companies.</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                     <i class="careerfy-icon careerfy-building"></i>
+                                     <span>Employer</span>
+                                     <small>I want to attract the best talent.</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="careerfy-user-form careerfy-user-form-coltwo">
+                        <ul>
+                            <li>
+                                <label>First Name:</label>
+                                <input value="Enter Your Name" onblur="if(this.value == '') { this.value ='Enter Your Name'; }" onfocus="if(this.value =='Enter Your Name') { this.value = ''; }" type="text">
+                                <i class="careerfy-icon careerfy-user"></i>
+                            </li>
+                            <li>
+                                <label>Last Name:</label>
+                                <input value="Enter Your Name" onblur="if(this.value == '') { this.value ='Enter Your Name'; }" onfocus="if(this.value =='Enter Your Name') { this.value = ''; }" type="text">
+                                <i class="careerfy-icon careerfy-user"></i>
+                            </li>
+                            <li>
+                                <label>Email Address:</label>
+                                <input value="Enter Your Email Address" onblur="if(this.value == '') { this.value ='Enter Your Email Address'; }" onfocus="if(this.value =='Enter Your Email Address') { this.value = ''; }" type="text">
+                                <i class="careerfy-icon careerfy-mail"></i>
+                            </li>
+                            <li>
+                                <label>Phone Number:</label>
+                                <input value="Enter Your Phone Number" onblur="if(this.value == '') { this.value ='Enter Your Phone Number'; }" onfocus="if(this.value =='Enter Your Phone Number') { this.value = ''; }" type="text">
+                                <i class="careerfy-icon careerfy-technology"></i>
+                            </li>
+                            <li class="careerfy-user-form-coltwo-full">
+                                <label>Categories:</label>
+                                <div class="careerfy-profile-select">
+                                    <select>
+                                        <option>Sales & Marketing</option>
+                                        <option>Sales & Marketing</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="careerfy-user-form-coltwo-full">
+                                <img src="extra-images/login-robot.png" alt="">
+                            </li>
+                            <li class="careerfy-user-form-coltwo-full">
+                                <input type="submit" value="Sign Up">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="careerfy-box-title careerfy-box-title-sub">
+                        <span>Or Sign Up With</span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <ul class="careerfy-login-media">
+                        <li><a href="#"><i class="fa fa-facebook"></i> Sign In with Facebook</a></li>
+                        <li><a href="#" data-original-title="google"><i class="fa fa-google"></i> Sign In with Google</a></li>
+                        <li><a href="#" data-original-title="twitter"><i class="fa fa-twitter"></i> Sign In with Twitter</a></li>
+                        <li><a href="#" data-original-title="linkedin"><i class="fa fa-linkedin"></i> Sign In with LinkedIn</a></li>
+                    </ul>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static 'script/jquery.js'  %}"></script>
+    <script src="{% static 'script/bootstrap.js'  %}"></script>
+    <script src="{% static 'script/slick-slider.js' %}"></script>
+    <script src="{% static 'plugin-script/counter.js'  %}"></script>
+    <script src="{% static 'plugin-script/fancybox.pack.js'  %}"></script>
+    <script src="{% static 'plugin-script/isotope.min.js' %}"></script>
+    <script src="{% static 'plugin-script/progressbar.js' %}"></script>
+    <script src="{% static 'script/google-map.js' %}"></script>
+    <script src="{% static 'build/mediaelement-and-player.js' %}"></script>
+    <script src="{% static 'plugin-script/functions.js' %}"></script>
+    <script src="{% static 'script/functions.js' %}"></script>
+
+</body>
+
+</html>
