@@ -1,4 +1,5 @@
 staticfiles-cdn/
+media/
 
 .DS_Store
 bin/
