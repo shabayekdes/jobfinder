@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from jobs.models import Job
 
@@ -11,3 +11,12 @@ def home(request):
         'jobs': jobs
     }
     return render(request, 'home.html', context)
+
+
+def show_job(request, id=id):
+    job = get_object_or_404(Job, id=id)
+
+    context = {
+        'job': job
+    }
+    return render(request, 'jobs/show.html', context)
