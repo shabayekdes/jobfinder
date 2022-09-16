@@ -26,11 +26,11 @@
                     <div class="careerfy-column-12">
                         <div class="careerfy-typo-wrap">
                             <figure class="careerfy-jobdetail-list">
-                                <span class="careerfy-jobdetail-listthumb"><img src="{{ job.image }}"
+                                <span class="careerfy-jobdetail-listthumb"><img src="/{{ job.image }}"
                                                                                 alt=""></span>
                                 <figcaption>
                                     <h2>{{ job.title }}</h2>
-                                    <span><small class="careerfy-jobdetail-type">{{ job.get_type_display }}</small> Huntington Learning Center <small
+                                    <span><small class="careerfy-jobdetail-type">{{ job.get_type_display }}</small> {{ job.company.name }} <small
                                             class="careerfy-jobdetail-postinfo">Posted {{ job.created_at|timesince }}</small></span>
                                     <ul class="careerfy-jobdetail-options">
                                         <li><i class="fa fa-map-marker"></i> Derry Street, London, United Kingdom <a

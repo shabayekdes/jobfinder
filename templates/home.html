@@ -132,12 +132,12 @@
                                 {% for job in jobs %}
                                     <li class="col-md-12">
                                         <div class="careerfy-joblisting-plain-wrap">
-                                            <figure><a href="#"><img src="{{ job.image }}"
+                                            <figure><a href="{{ job.get_absolute_url }}"><img src="{{ job.image }}"
                                                                      alt=""></a>
                                             </figure>
                                             <div class="careerfy-joblisting-plain-text">
                                                 <div class="careerfy-joblisting-plain-left">
-                                                    <h2><a href="#">{{ job.title }}</a>
+                                                    <h2><a href="{{ job.get_absolute_url }}">{{ job.title }}</a>
                                                         <span>Featured</span></h2>
                                                     <ul>
                                                         <li><span>@ {{ job.company.name }}</span></li>

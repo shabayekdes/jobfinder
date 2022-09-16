@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 from companies.models import Company
@@ -32,8 +33,8 @@ class Job(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def get_type(self):
-        return JobTypes[self.type]
+    def get_absolute_url(self):
+        return reverse("jobs:detail", kwargs={"id": self.id})
 
     def __str__(self):
         return self.title
