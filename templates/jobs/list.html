@@ -28,10 +28,11 @@
                     <div class="col-md-12 careerfy-typo-wrap">
                         <!-- Sub Header Form -->
                         <div class="careerfy-subheader-form">
-                            <form class="careerfy-banner-search">
+                            <form class="careerfy-banner-search" method="GET" action=".">
                                 <ul>
                                     <li>
                                         <input value="Job Title, Keywords, or Company"
+                                               name="q"
                                                onblur="if(this.value == '') { this.value ='Job Title, Keywords, or Company'; }"
                                                onfocus="if(this.value =='Job Title, Keywords, or Company') { this.value = ''; }"
                                                type="text">
@@ -216,7 +217,7 @@
                     <div class="careerfy-column-9 careerfy-typo-wrap">
                         <!-- FilterAble -->
                         <div class="careerfy-filterable">
-                            <h2>Showing 0-12 of 37 results</h2>
+                            <h2>Showing 0-12 of {{ jobs.paginator.count }} results</h2>
                             <ul>
                                 <li>
                                     <i class="careerfy-icon careerfy-sort"></i>
@@ -241,12 +242,13 @@
                                         <div class="careerfy-job-grid-wrap">
                                             <figure>
                                                 <span class="careerfy-jobtype-label">{{ job.get_type_display }}</span>
-                                                <a href="#"><img src="/{{ job.image }}" alt=""></a>
+                                                <a href="{{ job.get_absolute_url }}"><img src="/{{ job.image }}" alt=""></a>
                                                 <span class="careerfy-featured-label">Featured</span>
                                             </figure>
                                             <div class="careerfy-jobgrid-text">
-                                                <div class="careerfy-job-tag"><a href="#">@ {{ job.company.name }}</a></div>
-                                                <h2><a href="#">{{ job.title }}</a></h2>
+                                                <div class="careerfy-job-tag"><a href="#">@ {{ job.company.name }}</a>
+                                                </div>
+                                                <h2><a href="{{ job.get_absolute_url }}">{{ job.title }}</a></h2>
                                                 <ul class="careerfy-job-time">
                                                     <li><a href="#">{{ job.category.name }}</a></li>
                                                     <li>{{ job.created_at|timesince }}</li>
@@ -262,15 +264,18 @@
                         </div>
                         <!-- Pagination -->
                         <div class="careerfy-pagination-blog">
+                            Page {{ jobs.number }} of {{ jobs.paginator.num_pages }}.
                             <ul class="page-numbers">
-                                <li><a class="prev page-numbers" href="#"><span><i
-                                        class="careerfy-icon careerfy-arrows4"></i></span></a></li>
-                                <li><span class="page-numbers current">01</span></li>
-                                <li><a class="page-numbers" href="#">02</a></li>
-                                <li><a class="page-numbers" href="#">03</a></li>
-                                <li><a class="page-numbers" href="#">04</a></li>
-                                <li><a class="next page-numbers" href="#"><span><i
-                                        class="careerfy-icon careerfy-arrows4"></i></span></a></li>
+                                {% if jobs.has_previous %}
+                                    <li><a class="prev page-numbers" href="?page={{ page_obj.previous_page_number }}"><span><i
+                                            class="careerfy-icon careerfy-arrows4"></i></span></a></li>
+                                {% endif %}
+                                <li><span class="page-numbers current">{{ jobs.number }}</span></li>
+                                {% if jobs.has_next %}
+                                    <li><a class="next page-numbers" href="?page={{ jobs.next_page_number }}"><span><i
+                                            class="careerfy-icon careerfy-arrows4"></i></span></a></li>
+                                {% endif %}
+
                             </ul>
                         </div>
                     </div>

@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 
 from jobs.models import Job
@@ -14,10 +15,18 @@ def home(request):
 
 
 def list_job(request):
-    jobs = Job.objects.all()
+    query = request.GET.get('q')
+    if query is None:
+        jobs = Job.objects.all()
+    else:
+        jobs = Job.objects.search(query)
 
+    paginator = Paginator(jobs, 1)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    print(page_obj)
     context = {
-        'jobs': jobs
+        'jobs': page_obj
     }
     return render(request, 'jobs/list.html', context)
 
