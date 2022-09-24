@@ -1,0 +1,34 @@
+<div class="careerfy-job careerfy-joblisting-classic careerfy-jobdetail-joblisting">
+    <ul class="careerfy-row">
+        {% for job in list_jobs %}
+            <li class="careerfy-column-12">
+                <div class="careerfy-joblisting-classic-wrap">
+                    <figure><a href="{{ job.get_absolute_url }}"><img src="/{{ job.image }}"
+                                             alt=""></a></figure>
+                    <div class="careerfy-joblisting-text">
+                        <div class="careerfy-list-option">
+                            <h2><a href="{{ job.get_absolute_url }}">{{ job.title }}</a> <span>Featured</span>
+                            </h2>
+                            <ul>
+                                <li><a href="#">@ {{ job.company.name }}</a></li>
+                                <li><i class="careerfy-icon careerfy-maps-and-flags"></i>
+                                    Netherlands, Rotterdam
+                                </li>
+                                <li>
+                                    <i class="careerfy-icon careerfy-filter-tool-black-shape"></i>
+                                    {{ job.category.name }}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="careerfy-job-userlist">
+                            <a href="#" class="careerfy-option-btn">{{ job.get_type_display }}</a>
+                            <a href="#" class="careerfy-job-like"><i
+                                    class="fa fa-heart"></i></a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

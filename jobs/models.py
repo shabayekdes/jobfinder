@@ -7,7 +7,7 @@ from companies.models import Company
 from categories.models import Category
 
 
-class JobCareerLevels(models.IntegerChoices):
+class JobCareerLevels(models.TextChoices):
     ENTRY_LEVEL = 1, 'Entry-level'
     INTERMEDIATE = 2, 'Intermediate'
     MID_LEVEL = 3, 'Mid-level'
@@ -15,14 +15,14 @@ class JobCareerLevels(models.IntegerChoices):
     MANAGE = 5, 'Manager'
 
 
-class JobTypes(models.IntegerChoices):
+class JobTypes(models.TextChoices):
     FULL_TIME = 1, 'Full Time'
     PART_TIME = 2, 'Part Time'
     FREELANCE = 3, 'Freelance'
     TEMPORARY = 4, 'Temporary'
 
 
-class JobGender(models.IntegerChoices):
+class JobGender(models.TextChoices):
     BOTH = 1, 'Both'
     MALE = 2, 'Male'
     FEMALE = 3, 'Female'
@@ -53,6 +53,7 @@ class Job(models.Model):
     title = models.CharField(max_length=120)
     content = models.TextField(blank=True, null=True)
     offered_salary = models.CharField(max_length=50, blank=True)
+    experience = models.IntegerField(blank=True, null=True)
     active = models.BooleanField(default=True)
     image = models.ImageField(upload_to='media/jobs', blank=True, default='media/jobs/default.png')
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
