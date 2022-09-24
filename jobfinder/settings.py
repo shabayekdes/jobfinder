@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'categories',
     'companies',
-    'jobs'
+    'jobs',
+    'candidates'
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = ''
 MEDIA_URL = ''
+
+AUTH_USER_MODEL = "candidates.User"
