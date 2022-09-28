@@ -23,7 +23,8 @@ from jobs.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
-    path('jobs/', include('jobs.urls'))
+    path('jobs/', include('jobs.urls')),
+    path('candidates/', include('candidates.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

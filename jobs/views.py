@@ -1,15 +1,23 @@
+from django.contrib.auth import login
 from django.core.paginator import Paginator
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
+from candidates.forms import CandidateForm
 from jobs.models import Job
 
 
 # Create your views here.
 def home(request):
     jobs = Job.objects.all()[:5]
+    register_form = CandidateForm(request.POST or None)
+    if register_form.is_valid():
+        user = register_form.save()
+        login(request, user)
+        return redirect("candidates:show_profile")
 
     context = {
-        'jobs': jobs
+        'jobs': jobs,
+        'register_form': register_form
     }
     return render(request, 'home.html', context)
 
