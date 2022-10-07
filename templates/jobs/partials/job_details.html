@@ -1,0 +1,31 @@
+<div class="careerfy-jobdetail-services">
+    <ul class="careerfy-row">
+        <li class="careerfy-column-4">
+            <i class="careerfy-icon careerfy-salary"></i>
+            <div class="careerfy-services-text">Offerd Salary <small>{{ obj.offered_salary }}</small>
+            </div>
+        </li>
+        <li class="careerfy-column-4">
+            <i class="careerfy-icon careerfy-social-media"></i>
+            <div class="careerfy-services-text">Career Level <small>{{ obj.get_type_display }}</small>
+            </div>
+        </li>
+        <li class="careerfy-column-4">
+            <i class="careerfy-icon careerfy-briefcase"></i>
+            <div class="careerfy-services-text">Experience <small>{{ obj.experience }} Years</small></div>
+        </li>
+        <li class="careerfy-column-4">
+            <i class="careerfy-icon careerfy-user"></i>
+            <div class="careerfy-services-text">Gender <small>{{ obj.get_gender_display }}</small></div>
+        </li>
+        <li class="careerfy-column-4">
+            <i class="careerfy-icon careerfy-network"></i>
+            <div class="careerfy-services-text">Industry <small>{{ obj.category.name }}</small></div>
+        </li>
+        <li class="careerfy-column-4">
+            <i class="careerfy-icon careerfy-mortarboard"></i>
+            <div class="careerfy-services-text">Qualification <small>Master’s
+                Degree</small></div>
+        </li>
+    </ul>
+</div>

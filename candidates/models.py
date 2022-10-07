@@ -3,6 +3,9 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+from categories.models import Category
+from jobs.models import JobTypes, JobGender, JobCareerLevels
+
 
 class User(AbstractUser):
     class Role(models.TextChoices):
@@ -44,3 +47,12 @@ def create_user_profile(sender, instance, created, **kwargs):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     candidate_id = models.IntegerField(null=True, blank=True)
+    offered_salary = models.CharField(max_length=50, blank=True)
+    experience = models.IntegerField(blank=True, null=True)
+    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.CASCADE)
+    type = models.CharField(max_length=1, choices=JobTypes.choices, default=JobTypes.FULL_TIME)
+    gender = models.CharField(max_length=1, choices=JobGender.choices, default=JobGender.BOTH)
+    career_level = models.CharField(max_length=1, choices=JobCareerLevels.choices, default=JobCareerLevels.ENTRY_LEVEL)
+
+    def __str__(self):
+        return f"{self.get_gender_display}"

@@ -66,37 +66,7 @@
                         <div class="careerfy-typo-wrap">
                             <div class="careerfy-jobdetail-content">
                                 <div class="careerfy-content-title"><h2>Job Detail</h2></div>
-                                <div class="careerfy-jobdetail-services">
-                                    <ul class="careerfy-row">
-                                        <li class="careerfy-column-4">
-                                            <i class="careerfy-icon careerfy-salary"></i>
-                                            <div class="careerfy-services-text">Offerd Salary <small>{{ job.offered_salary }}</small>
-                                            </div>
-                                        </li>
-                                        <li class="careerfy-column-4">
-                                            <i class="careerfy-icon careerfy-social-media"></i>
-                                            <div class="careerfy-services-text">Career Level <small>{{ job.get_type_display }}</small>
-                                            </div>
-                                        </li>
-                                        <li class="careerfy-column-4">
-                                            <i class="careerfy-icon careerfy-briefcase"></i>
-                                            <div class="careerfy-services-text">Experience <small>{{ job.experience }} Years</small></div>
-                                        </li>
-                                        <li class="careerfy-column-4">
-                                            <i class="careerfy-icon careerfy-user"></i>
-                                            <div class="careerfy-services-text">Gender <small>{{ job.get_gender_display }}</small></div>
-                                        </li>
-                                        <li class="careerfy-column-4">
-                                            <i class="careerfy-icon careerfy-network"></i>
-                                            <div class="careerfy-services-text">Industry <small>{{ job.category.name }}</small></div>
-                                        </li>
-                                        <li class="careerfy-column-4">
-                                            <i class="careerfy-icon careerfy-mortarboard"></i>
-                                            <div class="careerfy-services-text">Qualification <small>Master’s
-                                                Degree</small></div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                {% include 'jobs/partials/job_details.html' with obj=request.user.profile %}
                                 <div class="careerfy-content-title"><h2>Job Description</h2></div>
                                 <div class="careerfy-description">
                                     <p>{{ job.content }}</p>
