@@ -73,7 +73,7 @@
             <ul class="careerfy-user-option">
                 <li><a href="#" class="careerfy-post-btn"><i class="careerfy-icon careerfy-arrows-2"></i> Post Job</a>
                 </li>
-                <li><a href="#" class="careerfy-btn-icon careerfy-open-signin-tab"><i
+                <li><a href="{% if request.user.is_authenticated %}/candidates/profile/{% else %}#{% endif %}" class="careerfy-btn-icon careerfy-open-signin-tab"><i
                         class="careerfy-icon careerfy-social-1"></i></a></li>
             </ul>
         </div>

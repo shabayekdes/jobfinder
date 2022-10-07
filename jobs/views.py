@@ -1,6 +1,7 @@
 from django.contrib.auth import login
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404, redirect
+from django.views.generic import ListView
 
 from candidates.forms import CandidateForm
 from jobs.models import Job
@@ -22,21 +23,10 @@ def home(request):
     return render(request, 'home.html', context)
 
 
-def list_job(request):
-    query = request.GET.get('q')
-    if query is None:
-        jobs = Job.objects.all()
-    else:
-        jobs = Job.objects.search(query)
-
-    paginator = Paginator(jobs, 15)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-    print(page_obj)
-    context = {
-        'jobs': page_obj
-    }
-    return render(request, 'jobs/list.html', context)
+class JobListView(ListView):
+    model = Job
+    template_name = 'jobs/list.html'
+    paginate_by = 15
 
 
 def show_job(request, id=id):

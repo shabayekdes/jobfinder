@@ -217,7 +217,7 @@
                     <div class="careerfy-column-9 careerfy-typo-wrap">
                         <!-- FilterAble -->
                         <div class="careerfy-filterable">
-                            <h2>Showing 0-12 of {{ jobs.paginator.count }} results</h2>
+                            <h2>Showing 0-{{ object_list.count }} of {{ page_obj.paginator.count }} results</h2>
                             <ul>
                                 <li>
                                     <i class="careerfy-icon careerfy-sort"></i>
@@ -237,7 +237,7 @@
                         <!-- JobGrid -->
                         <div class="careerfy-job careerfy-job-grid">
                             <ul class="careerfy-row">
-                                {% for job in jobs %}
+                                {% for job in object_list %}
                                     <li class="careerfy-column-4">
                                         <div class="careerfy-job-grid-wrap">
                                             <figure>
@@ -263,21 +263,34 @@
                             </ul>
                         </div>
                         <!-- Pagination -->
-                        <div class="careerfy-pagination-blog">
-                            Page {{ jobs.number }} of {{ jobs.paginator.num_pages }}.
-                            <ul class="page-numbers">
-                                {% if jobs.has_previous %}
-                                    <li><a class="prev page-numbers" href="?page={{ page_obj.previous_page_number }}"><span><i
-                                            class="careerfy-icon careerfy-arrows4"></i></span></a></li>
-                                {% endif %}
-                                <li><span class="page-numbers current">{{ jobs.number }}</span></li>
-                                {% if jobs.has_next %}
-                                    <li><a class="next page-numbers" href="?page={{ jobs.next_page_number }}"><span><i
-                                            class="careerfy-icon careerfy-arrows4"></i></span></a></li>
-                                {% endif %}
+                        {% if is_paginated %}
+                            <div class="careerfy-pagination-blog">
+                                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                                <ul class="page-numbers">
+                                    {% if page_obj.has_previous %}
+                                        <li><a class="prev page-numbers"
+                                               href="?page={{ page_obj.previous_page_number }}"><span><i
+                                                class="careerfy-icon careerfy-arrows4"></i></span></a></li>
+                                    {% endif %}
+                                    <!-- Numbered Buttons -->
+                                    {% for page in paginator.page_range %}
+                                        {% if page_obj.number == page %}
+                                            <li><span class="page-numbers current">{{ page_obj.number }}</span></li>
+                                        {% elif page > page_obj.number|add:'-3' and page < page_obj.number|add:'3' %}
+                                            <li>
+                                                <a class="page-numbers" href="?page={{ page }}">{{ page }}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% if page_obj.has_next %}
+                                        <li><a class="next page-numbers"
+                                               href="?page={{ page_obj.next_page_number }}"><span><i
+                                                class="careerfy-icon careerfy-arrows4"></i></span></a></li>
+                                    {% endif %}
 
-                            </ul>
-                        </div>
+                                </ul>
+                            </div>
+                        {% endif %}
                     </div>
 
                 </div>

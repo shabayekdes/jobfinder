@@ -2,12 +2,12 @@ from django.urls import path
 
 from .views import (
     show_job,
-    list_job
+    JobListView
 )
 
 app_name = 'jobs'
 
 urlpatterns = [
-    path("", list_job, name="list"),
+    path("", JobListView.as_view(), name="list"),
     path("<int:id>/", show_job, name="detail"),
 ]
